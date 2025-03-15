@@ -1,0 +1,84 @@
+/* Response status codes */
+.response-status {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-weight: 600;
+  font-size: 14px;
+  margin-right: 8px;
+}
+
+.response-status-200 {
+  background-color: var(--api-method-get-bg);
+  color: var(--api-method-get-color);
+}
+
+.response-status-4xx {
+  background-color: var(--api-method-delete-bg);
+  color: var(--api-method-delete-color);
+}
+
+.response-status-5xx {
+  background-color: #ef4444;
+  color: white;
+}
+
+/* API parameters styling */
+.api-params tbody tr:hover {
+  background-color: var(--ifm-color-emphasis-100);
+}
+
+.api-params thead th {
+  background-color: var(--ifm-color-emphasis-200);
+}
+
+/* Interactive API explorer */
+.try-it-container {
+  margin-top: 32px;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  background-color: var(--ifm-color-emphasis-100);
+}
+
+.try-it-heading {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+/* Customizing the language selector */
+.language-selector {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.language-button {
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.language-button.active {
+  background-color: var(--ifm-color-primary);
+  color: white;
+  border-color: var(--ifm-color-primary);
+}
+
+/* Make the documentation mobile responsive */
+@media (max-width: 768px) {
+  .openapi-container {
+    padding: 0;
+  }
+  
+  .api-params {
+    display: block;
+    overflow-x: auto;
+  }
+}
